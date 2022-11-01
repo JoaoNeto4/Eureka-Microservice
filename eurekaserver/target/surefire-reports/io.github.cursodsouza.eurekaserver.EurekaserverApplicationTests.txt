@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.github.cursodsouza.eurekaserver.EurekaserverApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.327 s - in io.github.cursodsouza.eurekaserver.EurekaserverApplicationTests
