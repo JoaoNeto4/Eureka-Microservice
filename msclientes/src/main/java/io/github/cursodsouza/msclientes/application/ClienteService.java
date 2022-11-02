@@ -1,27 +1,25 @@
 package io.github.cursodsouza.msclientes.application;
 
-import java.util.Optional;
-
-import javax.transaction.Transactional;
-
-import org.springframework.stereotype.Service;
-
 import io.github.cursodsouza.msclientes.domain.Cliente;
 import io.github.cursodsouza.msclientes.infra.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class ClienteService {
 
-	private ClienteRepository repository;
-	
-	@Transactional
-	public Cliente save(Cliente cliente) {
-		return repository.save(cliente);
-	}
-	
-	public Optional<Cliente> getByCPF(String cpf){
-		return repository.findByCpf(cpf);
-	}
+    private final ClienteRepository repository;
+
+    @Transactional
+    public Cliente save(Cliente cliente){
+        return repository.save(cliente);
+    }
+
+    public Optional<Cliente> getByCPF(String cpf){
+        return repository.findByCpf(cpf);
+    }
 }
