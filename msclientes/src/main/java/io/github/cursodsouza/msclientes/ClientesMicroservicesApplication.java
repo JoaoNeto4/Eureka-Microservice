@@ -10,6 +10,7 @@ public class ClientesMicroservicesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientesMicroservicesApplication.class, args);
+		
 	}
 
 }
