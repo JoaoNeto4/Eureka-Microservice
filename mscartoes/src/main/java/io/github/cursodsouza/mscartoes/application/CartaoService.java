@@ -1,4 +1,4 @@
-package io.github.cursodsouza.mscartoes.application.representation;
+package io.github.cursodsouza.mscartoes.application;
 
 import java.math.BigDecimal;
 import java.util.List;
