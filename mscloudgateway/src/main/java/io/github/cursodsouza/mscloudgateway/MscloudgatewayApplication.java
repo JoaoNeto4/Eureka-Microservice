@@ -22,6 +22,8 @@ public class MscloudgatewayApplication {
 		return builder
 				.routes()
 					.route(r -> r.path("/clientes/**").uri("lb://msclientes"))//nome que esta la no arquivo application.yml de msclientes
+					.route(r -> r.path("/cartoes/**").uri("lb://mscartoes"))//nome que esta la no arquivo application.yml de mscartoes
+					.route(r -> r.path("/avaliacoes-credito/**").uri("lb://msavaliadorcredito"))//nome que esta la no arquivo application.yml de msavaliadorcredito
 				.build();
 	}
 }
