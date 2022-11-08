@@ -1,4 +1,4 @@
-package io.github.cursodsouza.msavaliadorcredito;
+package io.github.cursodsouza.msavaliadorcredito.config;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Value;
