@@ -1,0 +1,662 @@
+{
+	"info": {
+		"_postman_id": "c059748d-23db-4248-8493-6b17d1ae5637",
+		"name": "MicroServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15404407"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Zezinho\",\n    \"cpf\": \"44444444444\",\n    \"idade\": 25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Salvar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Zezinho\",\n    \"cpf\": \"04477461966\",\n    \"idade\": 25\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://192.168.0.4:41849/clientes?cpf=04477461966"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:08:20 GMT"
+								},
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Dados Cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"zezinho\",\n    \"cpf\": \"05585461966\",\n    \"idade\": 25 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes?cpf=44444444444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "44444444444"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Dados Cliente",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"zezinho\",\n    \"cpf\": \"05585461888\",\n    \"idade\": 25 \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:41607/clientes?cpf=05577461966",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "41607",
+									"path": [
+										"clientes"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "05577461966"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:01:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"cpf\": \"05577461966\",\n    \"nome\": \"Zezinho\",\n    \"idade\": 25\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cartoes",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Bradesco Mastercard\",\n    \"bandeira\": \"MASTERCARD\",\n    \"renda\": 5000,\n    \"limite\": 8000\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cartoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Salvar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Bradesco Mastercard\",\n    \"bandeira\": \"MASTERCARD\",\n    \"renda\": 5000,\n    \"limite\": 8000\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cartoes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cartoes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:48:40 GMT"
+								},
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get Cartoes Renda Ate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cartoes?renda=5000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cartoes"
+							],
+							"query": [
+								{
+									"key": "renda",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Cartoes Renda Ate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cartoes?renda=5000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cartoes"
+									],
+									"query": [
+										{
+											"key": "renda",
+											"value": "5000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:53:08 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Bradesco Mastercard\",\n        \"bandeira\": \"MASTERCARD\",\n        \"renda\": 5000,\n        \"limiteBasico\": 8000\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Avaliador Credito",
+			"item": [
+				{
+					"name": "Situacao Cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/avaliacoes-credito/situacao-cliente?cpf=44444444444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"avaliacoes-credito",
+								"situacao-cliente"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "44444444444"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Situacao Cliente",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/avaliacoes-credito/situacao-cliente?cpf=04477461966",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"avaliacoes-credito",
+										"situacao-cliente"
+									],
+									"query": [
+										{
+											"key": "cpf",
+											"value": "04477461966"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:12:41 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cliente\": {\n        \"id\": 1,\n        \"nome\": \"Zezinho\",\n        \"idade\": 25\n    },\n    \"cartoes\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Avaliacao Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cpf\": \"44444444444\",\n    \"renda\": 5000\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/avaliacoes-credito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"avaliacoes-credito"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Avaliacao Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"04477461966\",\n    \"renda\": 5000\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/avaliacoes-credito",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"avaliacoes-credito"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:49:34 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartoes\": [\n        {\n            \"cartao\": \"Bradesco Mastercard\",\n            \"bandeira\": \"MASTERCARD\",\n            \"limiteAprovado\": 20000\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Solicitacao Emissao Cartao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idCartao\": 1,\n    \"cpf\": \"44444444444\",\n    \"endereco\": \"Rua x\",\n    \"limiteLiberado\": 20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/avaliacoes-credito/solicitacoes-cartao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"avaliacoes-credito",
+								"solicitacoes-cartao"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Solicitacao Emissao Cartao",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idCartao\": 1,\n    \"cpf\": \"05585461888\",\n    \"endereco\": \"Rua x\",\n    \"limiteLiberado\": 20000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/avaliacoes-credito/solicitacoes-cartao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"avaliacoes-credito",
+										"solicitacoes-cartao"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 08 Nov 2022 18:57:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"protocolo\": \"3d47c5c8-7181-4135-8eb3-71932dcb836e\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Keycloack Token",
+			"item": []
+		},
+		{
+			"name": "Keycloack Token",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "bs9QDBeARomzfm6wkdOAYADStq8EYJdB",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJma0M0bXVlUDZxcS1DeFFrZWdJOWMwemUzMTN2elNqcU4tUTk1OEhCS3RZIn0.eyJleHAiOjE2NjgwMTQzMjUsImlhdCI6MTY2ODAxNDAyNSwianRpIjoiYTMwZGNmMzYtNTY5OS00MzE0LWI5Y2ItYTM4ZDAwZjBlYmJkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgxL3JlYWxtcy9tc2NvdXJzZXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjFhYjgxZDM0LWRmYTctNGY4NC1iMTk5LTI4NGZlNTVmZTI1MCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1zY3JlZGl0byIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1tc2NvdXJzZXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1zY3JlZGl0byI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiY2xpZW50SWQiOiJtc2NyZWRpdG8iLCJjbGllbnRIb3N0IjoiMTcyLjE3LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1zY3JlZGl0byIsImNsaWVudEFkZHJlc3MiOiIxNzIuMTcuMC4xIn0.RtSxJS7Ukgc901Y2fJN3ahYTHTmoyx4Kyaqu5dB55faz1hIyY7Uk6XS8_CuFmz9J9UTYwCngs-QKXxApXLZfLAUONXex3lh2cHX3nNZ-QyktLYNs7x951croPuhT7mk4zj6YSp7e1AP2YcwDpVOqc7MYVADY800wkkofOHRNY_cvzwBxaXaEMZneMqKeSP16MiuGpttPWfyKLGbCZQ1imLhnnoAZHn0YH9vN4pQFhcGoOiS_-etXKf3s4r_B_wzW3SQw-LSb7knYv7tUECYv4tVeKp6gitXXGoI0s4ACD8wRaBV36oplXuYGQ_OvA5BuzNbhBdiLK-ItiA0xfMNnaA",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "teste",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8081/realms/mscourserealm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "mscredito",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8081/realms/mscourserealm/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
