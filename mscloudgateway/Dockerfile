@@ -8,5 +8,7 @@ WORKDIR /app
 COPY --from=build ./app/target/*.jar ./app.jar
 
 ARG EUREKA_SERVER=localhost
+ARG KEYCLOACK_SERVER=localhost
+ARG KEYCLOACK_PORT=8081
 
 ENTRYPOINT java -jar -Dspring.profiles.active=production app.jar
