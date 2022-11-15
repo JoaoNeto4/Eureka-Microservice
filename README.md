@@ -15,7 +15,7 @@ $ sudo apt-get install docker
 $ sudo apt-get install openjdk-11-jdk
 $ java --version
 ```
-- Se a saída do caomando anterior for diferente do Java 11 você pode alterá-lo com:
+- Se a saída do comando anterior for diferente do Java 11 você pode alterá-lo com:
 ```
 $ sudo update-alternatives --config java
 ```
